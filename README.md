@@ -192,7 +192,61 @@ Export candidate results:
 
 
 ---
+# 📸 Application Screenshots
 
+## 🏠 Resume Screening Dashboard
+
+Upload a Job Description and multiple resumes to start the AI-powered screening process.
+
+![Upload Dashboard](assets/upload.png)
+
+
+---
+
+## 🏆 Candidate Ranking
+
+The system automatically ranks candidates based on ATS score, skill match, experience, and semantic similarity.
+
+![Candidate Ranking](assets/ranking.png)
+
+
+---
+
+## 📊 Analytics Dashboard
+
+Interactive charts provide insights into:
+
+- ATS score comparison
+- Skill scores
+- Experience analysis
+- Recommendation distribution
+- Candidate performance
+
+![Analytics Dashboard](assets/analytics%20dashboard.png)
+
+
+---
+
+## 🤖 AI Recruiter Feedback
+
+The AI generates detailed recruiter insights including:
+
+- Candidate strengths
+- Weaknesses
+- Missing skills
+- Overall recommendation
+- Resume summary
+
+![AI Feedback](assets/ai_feedback.png)
+
+
+---
+
+## 📥 Report Export
+
+Recruiters can download candidate analysis reports in CSV format for further evaluation.
+
+![Report Export](assets/report.png)
 # 📂 Project Structure
 
 ```
