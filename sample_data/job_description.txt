@@ -1,0 +1,17 @@
+Looking for Python Developer.
+
+Must know
+
+Python
+
+FastAPI
+
+SQL
+
+Git
+
+Docker
+
+REST API
+
+Problem Solving

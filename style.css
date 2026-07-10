@@ -1,0 +1,133 @@
+/* ======================================================
+   AI Resume Screening Agent
+   Purple Premium Theme
+====================================================== */
+
+/* Main Background */
+.stApp {
+    background-color: #f6f4ff;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg,#5b21b6,#7c3aed);
+    color: white;
+}
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Titles */
+h1, h2, h3 {
+    color: #4c1d95;
+    font-weight: 700;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg,#7c3aed,#9333ea);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg,#6d28d9,#7e22ce);
+    transform: scale(1.02);
+}
+
+/* File Upload */
+[data-testid="stFileUploader"] {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    border: 2px dashed #8b5cf6;
+}
+
+/* Metrics */
+[data-testid="metric-container"] {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.12);
+    border-left: 6px solid #7c3aed;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    font-weight: bold;
+    color: #5b21b6;
+}
+
+/* Success */
+.stAlert[data-baseweb="notification"] {
+    border-radius: 10px;
+}
+
+/* Download Buttons */
+.stDownloadButton > button {
+    background: #7c3aed;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.stDownloadButton > button:hover {
+    background: #5b21b6;
+}
+
+/* Slider */
+.stSlider {
+    padding-top: 10px;
+}
+
+/* Text Inputs */
+.stTextInput input {
+    border-radius: 10px;
+}
+
+/* Tables */
+table {
+    border-radius: 10px;
+}
+
+/* Plotly Charts */
+.js-plotly-plot {
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.08);
+}
+
+/* Footer */
+footer {
+    visibility: hidden;
+}
+
+/* Header */
+header {
+    visibility: hidden;
+}
+
+/* Responsive */
+@media screen and (max-width:768px){
+
+    h1{
+        font-size:28px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+}
