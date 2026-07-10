@@ -523,6 +523,10 @@ if st.session_state.results is not None:
 # LEADERBOARD
 # =====================================================
 
+if st.session_state.results is not None:
+
+    df = st.session_state.results
+
     st.divider()
 
     st.header("🏆 Top Candidates")
@@ -530,158 +534,37 @@ if st.session_state.results is not None:
     leaders = leaderboard(df)
 
     st.dataframe(
-
         leaders[
             [
-
                 "Resume",
-
                 "Final Score",
-
                 "Recommendation"
-
             ]
-
         ],
-
         use_container_width=True
-
     )
-st.subheader("📥 Download Reports")
 
-col1, col2, col3 = st.columns(3)
 
-with col1:
+    # =====================================================
+    # DOWNLOAD REPORTS
+    # =====================================================
+
+    st.subheader("📥 Download Reports")
 
     csv = df.drop(
-        columns=["AI", "Resume Text"],
+        columns=[
+            "AI",
+            "Resume Text"
+        ],
         errors="ignore"
     ).to_csv(index=False)
 
-    st.download_button(
-        "📄 CSV",
-        csv,
-        "resume_report.csv",
-        "text/csv"
-    )
-
-with col2:
-
-    excel = generate_excel(df)
 
     st.download_button(
-        "📊 Excel",
-        excel,
-        "resume_report.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
-
-with col3:
-
-    pdf = generate_pdf(df)
-
-    st.download_button(
-        "📑 PDF",
-        pdf,
-        "resume_report.pdf",
-        "application/pdf"
-    )
-# =====================================================
-# RADAR CHART
-# =====================================================
-
-    st.divider()
-
-    st.header("🎯 Best Candidate Profile")
-
-    st.plotly_chart(
-
-        radar_chart(best),
-
-        use_container_width=True
-
-    )
-
-# =====================================================
-# SEARCH
-# =====================================================
-
-    st.divider()
-
-    st.header("🔍 Search Candidate")
-
-    search = st.text_input(
-
-        "Enter Resume Name"
-
-    )
-
-    if search:
-
-        filtered = df[
-
-            df["Resume"]
-
-            .str.contains(
-
-                search,
-
-                case=False
-
-            )
-
-        ]
-
-        if len(filtered):
-
-            st.dataframe(
-
-                filtered,
-
-                use_container_width=True
-
-            )
-
-        else:
-
-            st.warning(
-
-                "No matching resume found."
-
-            )
-
-# =====================================================
-# FILTER
-# =====================================================
-
-    st.divider()
-
-    st.header("🎯 Filter Candidates")
-
-    minimum = st.slider(
-
-        "Minimum ATS Score",
-
-        0,
-
-        100,
-
-        60
-
-    )
-
-    filtered_df = df[
-
-        df["Final Score"] >= minimum
-
-    ]
-
-    st.dataframe(
-
-        filtered_df,
-
-        use_container_width=True
-
+        label="Download CSV",
+        data=csv,
+        file_name="resume_report.csv",
+        mime="text/csv"
     )
 
 # =====================================================
