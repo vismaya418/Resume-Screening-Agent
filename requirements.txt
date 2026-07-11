@@ -10,7 +10,7 @@ PyPDF2==3.0.1
 reportlab==4.4.3
 sentence-transformers==5.1.0
 scikit-learn==1.7.1
-torch==2.8.0
+torch
 transformers==4.55.4
 huggingface-hub==0.34.4
 requests==2.32.5
