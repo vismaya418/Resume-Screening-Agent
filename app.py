@@ -2,22 +2,28 @@ import os
 import tempfile
 import pandas as pd
 import streamlit as st
+
 from report import (
     generate_excel,
     generate_pdf
 )
+
 from parser import extract_text
 from scorer import calculate_score
+
 from utils import (
     extract_skills,
     skill_match_score,
     recommendation
 )
+
 from ats import (
     experience_years,
     education_score
 )
+
 from llm import analyze_resume
+
 from charts import (
     score_bar_chart,
     recommendation_pie,
@@ -28,12 +34,30 @@ from charts import (
     radar_chart,
     leaderboard
 )
+
+
+# -----------------------------------------------------
+# PAGE CONFIG
+# -----------------------------------------------------
+
+st.set_page_config(
+    page_title="AI Resume Screening Agent",
+    page_icon="📄",
+    layout="wide"
+)
+
+
+# -----------------------------------------------------
+# LOAD CSS
+# -----------------------------------------------------
+
 def load_css():
     with open("style.css") as f:
         st.markdown(
             f"<style>{f.read()}</style>",
             unsafe_allow_html=True
         )
+
 
 load_css()
 # -----------------------------------------------------
