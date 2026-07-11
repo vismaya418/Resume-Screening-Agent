@@ -21,11 +21,6 @@ This project automates the hiring workflow by:
 - Ranking candidates automatically
 
 ---
-# 🚀 Live Demo
-
-Try the application here:
-
-🔗 https://resume-screening-agent-9n48.onrender.com/
 
 # 🚀 Features
 
