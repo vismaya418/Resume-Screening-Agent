@@ -350,27 +350,6 @@ The application will open in your browser:
 http://localhost:8501
 ```
 
----
-
-# 📸 Application Screenshots
-
-Add screenshots here:
-
-```
-assets/
-
-├── upload.png
-├── ranking.png
-├── dashboard.png
-└── ai_feedback.png
-```
-
-Example:
-
-![Dashboard](assets/dashboard.png)
-
----
-
 # 📈 Workflow
 
 ```
